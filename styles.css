@@ -1,0 +1,493 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --color-naranja: rgb(221, 121, 27);
+    --color-celeste: rgb(220, 226, 240);
+    --color-mostaza: rgb(241, 193, 73);
+    --color-oscuro: rgb(79, 77, 76);
+    --color-claro: rgb(214, 214, 214);
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: var(--color-oscuro);
+    font-size: 0.95em;
+}
+html{
+    scroll-behavior: smooth;
+    background-color: var(--color-oscuro);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+.main-header {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    background-color: var(--color-celeste);
+    z-index: 1000;
+    padding: 12px 5px;
+}
+.main-header__elementos {
+    width: 100%;
+}
+.main-header__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.main-header__marca {
+    text-align: center;
+    font-weight: bold;
+    color: rgb(27, 110, 24);
+    max-width: 96px;
+}
+.main-header__empresa {
+    font-size: 1.2em;
+}
+
+.nav-menu {
+    position: relative;
+}
+.nav-menu__item {
+    border-bottom: 2px solid var(--color-mostaza);
+}
+.nav-menu__lista {
+    position: fixed;
+    list-style: none;
+    top: 80px;
+    right: 0;
+    width: 80%;
+    height: 80vh;
+    background-color: rgba(205, 221, 97, 0.80);
+    font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5%;
+    border-radius: 50px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateX(100%);
+    transition: 0.3s ease-in-out;
+}
+.nav-menu__mostrar {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateX(0);
+}
+
+.nav-menu__link {
+    display: block;
+    padding: 15px;
+    font-weight: bold;
+}
+.form-buscador {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding: 5px;
+    border-radius: 15px;
+    border-bottom: 2px solid var(--color-mostaza);
+    flex: 1;
+}
+.form-buscador__input {
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    color: inherit;
+    font-family: inherit;
+    background-color: transparent;
+    text-align: center;
+    flex: 1;
+}
+.form-buscador__icono {
+    width: 20px;
+    height: 20px;
+    fill: none; /* relleno */
+    stroke: var(--color-mostaza); /* contorno */
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.5px;
+}
+.boton {
+    display: flex;
+    height: 30px;
+    width: 10%;
+    max-width: 36px;
+    background-color: transparent;
+    font-family: inherit;
+    border: none;
+    flex-direction: column;
+    gap: 6px;
+    transition: .3s linear;
+    border-radius: 15px;
+    color: var(--color-oscuro);
+}
+.boton span{
+    width: 100%;
+    height: 4px;
+    background-color: var(--color-oscuro);
+    border-radius: 10px;
+}
+
+.hero__container {
+    width: 100%;
+    height: calc(100vh - 52px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-claro);
+    text-align: center;
+    background-size: cover;
+}
+.hero__titulo {
+    font-size: 1.77em;
+}
+.hero__container .hero__subtitulo, .hero__boton {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+.hero__boton {
+    min-height: 40px;
+    min-width: 150px;
+    width: 55vw;
+    max-width: 300px;
+    background-color: var(--color-naranja);
+    justify-content: center;
+    font-family: inherit;
+    color: var(--color-claro);
+}
+
+.principal {
+    background: var(--color-celeste);
+    text-align: center;
+    padding: 15px;
+}   
+.categorias__titulo, .carrusel-prod__titulo, .confianza__titulo {
+    max-width: 80vw;
+    padding: 5px;
+    border-bottom: 2px solid var(--color-mostaza);
+    border-radius: 10px;
+    margin: 30px auto;
+}
+.categorias__grid, .confianza__lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.categorias__tarjeta, .confianza__tarjeta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Si tiene una tarjeta con una altura relativa entonces seria bueno aspect-ratio: ancho/alto (relacion)*/
+    height: 290px;
+    margin: 12px;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    width: min(70%, 850px);
+}
+.categorias__nombres, .confianza__nombre {
+    margin: 10px 0;
+}
+.categorias__boton {
+    margin-bottom: 8px;
+    width: 40vw;
+    max-width: 180px;
+    justify-content: center;
+    font-weight: bold;
+    background: var(--color-mostaza);
+}
+
+.categorias__figure, .confianza__figure {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 5px;
+    overflow: hidden;
+
+}
+.categorias__img, .confianza__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*
+    fill hace que todo se adapte y deforme
+    cover: llena todo manteniendo la proporción, recortando
+    contain: muestra toda la imagen aunque sobre espacio
+    */
+}
+
+.carrusel-prod__titulo {
+    margin-bottom: 15px;
+}
+.carrusel-prod__control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    height: 300px;
+}
+.carrusel-prod__track {
+    display: flex;
+    gap: 20px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    flex: 1;
+    justify-content: flex-start;
+    /*
+    Si usamos esto, ocupa todo del contenedor, pero hay botones, entonces rebalsa
+    width: 100%;
+    */
+    height: 100%;
+    max-width: 1200px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex: 0 0 300px; /*flex-grow, flex-shrink, flex-basis*/
+    /* que PORCION ocupas, que PORCION te reduces, TAMAÑO base*/
+}
+.card h3, .card p {
+    margin: 0;
+}
+.card figure {
+    height: 50%;
+    width: 100%;
+    overflow: hidden;
+    margin: 0;
+}
+.carrusel-prod__control img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.carrusel-prod__flecha{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    justify-content: center;
+}
+.carrusel-prod__flecha svg {
+    width: 20px;
+    height: 20px;
+    stroke: var(--color-mostaza);
+    stroke-width: 2.5;
+}
+.carrusel-prod__flecha--izquierda {
+    transform: rotate(180deg);
+}
+
+.confianza__descripcion {
+    font-size: 1.1em;
+}
+
+.footer-tienda {
+    background-color: var(--color-oscuro);
+    color: var(--color-celeste);    
+    min-height: 150px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+.footer-tienda__titulo--empresa {
+    font-size: 1.5em;
+}
+.footer-tienda__frase, .footer-tienda__lista {
+    font-size: 1.1em;
+}
+.footer-tienda__container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer-tienda--empresa {
+    width: 40vw;
+}
+.footer-tienda--contacto {
+    width: 60vw;
+}
+.footer-tienda__titulo--contacto {
+    margin-top: 0;
+}
+.footer-tienda__metodos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.footer-tienda__columna {
+    text-align: center;
+}
+.footer-tienda__lista {
+    margin: 0;
+    list-style: none;
+    padding: 0;   
+    display: block;
+}
+.footer-tienda__link {
+    display: block;
+    padding: 5px;
+}
+
+section[id], h2[id], footer[id] {
+    scroll-margin-top: 70px;
+}
+
+@media (max-width: 380px) {
+    .boton--transparent {
+        width: 0;
+        visibility: hidden;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-header__marca {
+        visibility: hidden;
+        width: 0;
+        height: 0;
+    }
+    .footer-tienda--empresa {
+        visibility: hidden;
+        width: 0;
+    }
+    .footer-tienda__metodos {
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+    .footer-tienda__un-metodo {
+        gap: 10px;
+    }
+    .footer-tienda__container {
+        align-items: center;
+    }
+}
+@media (min-width: 889px) {
+    .boton:hover { 
+        transform: scale(1.1);
+    }
+    .boton--transparent {
+        width: 0;
+        visibility: hidden;
+    }
+    .carrusel-prod__flecha svg:hover {
+        stroke: var(--color-naranja);
+    }
+    .categorias__grid{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 15px; 
+        justify-content: center;
+        align-items: center;    
+    }
+    .categorias__tarjeta {
+        margin: 0;
+        width: 95%;
+        justify-self: center;
+    }
+    .categorias__tarjeta:first-child {
+        grid-column: span 2;
+    }
+    .categorias__tarjeta:nth-child(2) {
+        grid-column: span 2;
+    }
+    .categorias__tarjeta:nth-child(3) {
+        grid-column: span 2;
+    }
+    .categorias__tarjeta:nth-child(4) {
+        grid-column: span 3;
+    }
+    .categorias__tarjeta:last-child {
+        grid-column: span 3;
+    }
+    .confianza__lista {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .confianza__tarjeta{
+        justify-self: center;
+        width: 100%;
+        margin: 0;
+    }
+    .footer-tienda__titulo--empresa{
+        color: var(--color-naranja);
+    }
+    .boton--transparent{
+        visibility: hidden;
+    }
+    .form-buscador{
+        flex: 1;
+    }
+    .nav-menu__lista{
+        position: static;
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+        flex-direction: row;
+        background-color: transparent;
+        height: auto;
+        padding: 0;
+        width: auto;
+        justify-content: flex-start;
+        gap: 10px;
+        font-size: 1.1em;
+    }
+    .nav-menu__link {
+        padding: 5px;
+    }
+    .main-header__container {
+        margin: 0;
+    }
+    .main-header__elementos {
+        display: flex;
+        max-width: 1500px;
+        margin: auto;
+        justify-content: space-between;
+    }
+    .main-header__marca{
+        font-size: 1.2em;
+        max-width: 120px;
+    }
+
+    .nav-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center ;
+    }
+    .nav-menu__lista {
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+    }
+    .nav-menu__item{
+        pointer-events: auto;
+        border-bottom: 4px solid transparent;
+        border-radius: 8px;
+        text-align: center;
+        transition: 0.3s linear;
+    }
+    .nav-menu__item:hover {
+        color: var(--color-celeste);
+        background-color: var(--color-naranja);
+        border-bottom: 4px solid var(--color-mostaza);
+    }
+}

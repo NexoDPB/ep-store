@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="E&P Store es una tienda virtual de abarrotes donde encontraras frutas, verduras, lácteos, bebidas y productos esenciales para el hogar">
+        <meta name="author" content="Portal Bacon Jheferson D.">
+        <meta name="theme-color" content="#4CAF50">
+        <meta property="og:title" content="E&P Store">
+        <meta property="og:description" content="Tu despensa completa desde la web.">
+        <meta property="og:image" content="Imagenes/principal/logoTienda.png">
+        <meta property="og:type" content="website">
+        <meta property="og:locale" content="es_PE">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="E&P Store">
+        <meta name="twitter:description" content="Tu despensa completa desde la web.">
+        <meta name="twitter:image" content="Imagenes/principal/logoTienda.png">
+        <!-- que aparezca en las sugerencias del motor de busqueda y que siga los enlaces de esta pagina -->
+        <meta name="robots" content="index, follow">
+        <title>E&P Store</title>
+        <link rel="stylesheet" href="styles.css">
+        <script src="app.js" defer></script>
+        <link rel="icon" href="Imagenes/principal/logoTienda.png" type="image/png">
+    </head>
+    <body>
+        <header class="main-header">
+            <div class="main-header__elementos">
+                <div class="container main-header__container">
+                    <div class="main-header__marca">
+                        <a href="./index.html">
+                            Abarrotes<br><span class="main-header__empresa">E&P Store</span>
+                        </a>
+                    </div>
+                    
+                    <form class="form-buscador" role="search">
+                        <input class="form-buscador__input" type="text" name="nombre-produc" id="buscar-produc" autocomplete="off" spellcheck="false" placeholder="Busca tu producto...">
+                        <svg class="form-buscador__icono" xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 24 24">
+                            <!-- Se escala a 24x24 -->
+                            <circle cx = "12" cy = "12" r = "8"></circle>
+                            <!-- siempre va d, y sus comandos relativos y absolutos -->
+                            <!-- tambien hay line, polyline -->
+                            <path d="m23.9 23.9-6.24-6.24"></path>
+                        </svg>
+                    </form>
+                    <button class="boton boton--transparent" id="boton--hamburguesa" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+                <!-- Independiente del header por si se quiere poner en el footer -->
+                <nav class="nav-menu">
+                    <ul class="nav-menu__lista" id="nav-menu--desplegar">
+                        <li class="nav-menu__item"><a href="#inicio" class="nav-menu__link nav-menu__link--activo">Inicio</a></li>
+                        <li class="nav-menu__item"><a href="#categorias" class="nav-menu__link">Categorías</a></li>
+                        <li class="nav-menu__item"><a href="#ofertas" class="nav-menu__link">Ofertas</a></li>
+                        <li class="nav-menu__item"><a href="#mas-vendidos" class="nav-menu__link">Más Vendidos</a></li>
+                        <li class="nav-menu__item"><a href="#nosotros" class="nav-menu__link">Nosotros</a></li>
+                        <li class="nav-menu__item"><a href="#contacto" class="nav-menu__link">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <section class = "hero" id = "inicio">
+            <div id="fondo-dinamico" class="hero__container">
+                <h1 class="hero__titulo">TU DESPENSA COMPLETA DESDE LA WEB</h1>
+                <p class="hero__subtitulo">Productos frescos y lo esencial para una casa</p>
+                <button class="boton hero__boton">Comprar Productos</button>
+            </div>
+        </section>
+        <main class = "principal">
+            <section class="categorias" id="categorias">
+                <div class="container">
+                    <h2 class="categorias__titulo">SELECCIONA UNA CATEGORIA</h2>
+                    <div class="categorias__grid">
+                        <div class="categorias__tarjeta">
+                            <figure class="categorias__figure">
+                                <img loading = "lazy" class="categorias__img" src="Imagenes/principal/fruVer.png" alt="Imagen de Frutas">
+                            </figure>
+                            <h3 class="categorias__nombres">Frutas y Verduras</h3>
+                            <button class="boton categorias__boton">Ver mas</button>
+                        </div>
+                        <div class="categorias__tarjeta">
+                            <figure class="categorias__figure">
+                                <img loading = "lazy" class="categorias__img" src = "Imagenes/principal/lacteos.png" alt = "Imagen de Lácteos">
+                            </figure>
+                            <h3 class="categorias__nombres">Lácteos</h3>
+                            <button class="boton categorias__boton">Ver mas</button>
+                        </div>
+                        <div class="categorias__tarjeta">
+                            <figure class="categorias__figure">
+                                <img loading = "lazy" class="categorias__img" src = "Imagenes/principal/bebidas.png" alt = "Imagen de Bebidas">
+                            </figure>
+                            <h3 class="categorias__nombres">Bebidas</h3>
+                            <button class="boton categorias__boton">Ver mas</button>
+                        </div>
+                        <div class="categorias__tarjeta">
+                            <figure class="categorias__figure">
+                                <img loading = "lazy" class="categorias__img" src = "Imagenes/principal/papeleria.png" alt = "Imagen de Productos de Limpieza">
+                            </figure>
+                            <h3 class="categorias__nombres">Librería</h3>
+                            <button class="boton categorias__boton">Ver mas</button>
+                        </div>
+                        <div class="categorias__tarjeta">
+                            <figure class="categorias__figure">
+                                <img loading = "lazy" class="categorias__img" src = "Imagenes/principal/abarrotes.png" alt = "Imagenes/principal de Abarrotes">
+                            </figure>
+                            <h3 class="categorias__nombres">Abarrotes</h3>
+                            <button class="boton categorias__boton">Ver mas</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="carrusel-prod">
+                <div class="container">
+                    <h2 class="carrusel-prod__titulo" id="ofertas">PRODUCTOS EN OFERTA</h2>
+                    <div class="carrusel-prod__control">
+                        <button class="boton carrusel-prod__flecha">
+                            <svg class="carrusel-prod__flecha--izquierda" xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 24 24" fill = "none" stroke-linecap = "round" stroke-linejoin = "round">
+                                <polyline points = "14 2 20 12 14 22"/>
+                            </svg>
+                        </button>
+                        <!-- Va a mantener los divs que se moveran, separados por 20px -->
+                        <div class="carrusel-prod__track carrusel-prod__track--oferta"></div>
+                        <button class="boton carrusel-prod__flecha">
+                            <svg class="carrusel-prod__flecha--derecha" xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 24 24" fill = "none"  stroke-linecap = "round" stroke-linejoin = "round">
+                                <polyline points = "14 2 20 12 14 22"/>
+                            </svg>
+                        </button>
+                    </div>
+                    <h2 class = "carrusel-prod__titulo" id="mas-vendidos">PRODUCTOS MÁS VENDIDOS</h2>
+                    <div class="carrusel-prod__control">
+                        <button class="boton carrusel-prod__flecha">
+                            <svg class="carrusel-prod__flecha--izquierda" xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 24 24" fill = "none" stroke-linecap = "round" stroke-linejoin = "round">
+                                <polyline points = "14 2 20 12 14 22"/>
+                            </svg>
+                        </button>
+                        <div class="carrusel-prod__track carrusel-prod__track--cabeza"></div>
+                        <button class="boton carrusel-prod__flecha">
+                            <svg class="carrusel-prod__flecha--derecha" xmlns = "http://www.w3.org/2000/svg" viewBox = "0 0 24 24" fill = "none" stroke-linecap = "round" stroke-linejoin = "round">
+                                <polyline points = "14 2 20 12 14 22"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
+            <section class="confianza" id="nosotros">
+                <div class="container">
+                    <h2 class="confianza__titulo">¿POR QUÉ CONFIAR EN NOSOTROS?</h2>
+                    <div class="confianza__lista">
+                        <div class="confianza__tarjeta">
+                            <h3 class="confianza__nombre">Todo en uno </h3>
+                            <figure class="confianza__figure">
+                                <img loading = "lazy" class="confianza__img" alt="Imagen de Delivery" src="Imagenes/principal/todoUno.png">
+                            </figure>
+                            <p class="confianza__descripcion">Contamos con mucha variedad de productos</p>
+                        </div>
+                        <div class="confianza__tarjeta">
+                            <h3 class="confianza__nombre">Productos Frescos 🥬</h3>
+                            <figure class="confianza__figure">
+                                <img loading = "lazy" class="confianza__img" alt="Imagen de productos frestos" src="Imagenes/principal/frutFresc.png">
+                            </figure>
+                            <p class="confianza__descripcion">La mejor selección de productos</p>
+                        </div>
+                        <div class="confianza__tarjeta">
+                            <h3 class="confianza__nombre">Pago Seguro 💳</h3>
+                            <figure class="confianza__figure">
+                                <img loading = "lazy" class="confianza__img" alt="Imagen de pagos seguro" src="Imagenes/principal/PagoSeguro.png">
+                            </figure>
+                            <p class="confianza__descripcion">Pago seguro con Yape, Plin o efectivo</p>
+                        </div>
+                        <div class="confianza__tarjeta">
+                            <h3 class="confianza__nombre">Buena atención ⭐</h3>
+                            <figure class="confianza__figure">
+                                <img loading = "lazy" class="confianza__img" alt="Imagenes/principal de buena atención" src="Imagenes/principal/buenaAtencion.png">
+                            </figure>
+                            <p class="confianza__descripcion">Tenemos una atención rápida y amigable</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer-tienda" id="contacto">
+            <div class="container footer-tienda__container">
+                <div class="footer-tienda__columna footer-tienda--empresa">
+                    <a class="footer-tienda__titulo--empresa" href="/">E&P Store</a>
+                    <p class="footer-tienda__frase">Confía en nosotros, tenemos lo que necesitas</p>
+                </div>
+                <div class="footer-tienda__columna footer-tienda--contacto">
+                    <h2 class="footer-tienda__titulo--contacto">¡Contáctanos!</h2>
+                    <div class="footer-tienda__metodos">
+                        <div class="footer-tienda__un-metodo footer-tienda__un-metodo--contacto">
+                            <ul class="footer-tienda__lista">
+                                <li class = "footer-tienda__item">
+                                    <a href="tel:+51913339810" target="_blank" rel="noopener noreferrer" class="footer-tienda__link">Llamanos</a>
+                                </li>
+                                <li class = "footer-tienda__item">
+                                    <a class="footer-tienda__link" href="mailto:jportalb24_1@unc.edu.pe">Email</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-tienda__un-metodo footer-tienda__un-metodo--redes">
+                            <ul class="footer-tienda__lista">
+                                <li class = "footer-tienda__item">
+                                    <a class="footer-tienda__link" href="http://wa.me/51913339810" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+                                </li>
+                                <li class = "footer-tienda__item">lacteos
+                                    <a class="footer-tienda__link" href="http://www.facebook.com/profile.php?id=61587004095057" target="_blank" rel="noopener noreferrer">Facebook</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
